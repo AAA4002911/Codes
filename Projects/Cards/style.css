@@ -1,0 +1,128 @@
+:root {
+    margin: 0;
+}
+
+article {
+    width: 100%;
+}
+
+article>h1 {
+    position: absolute;
+    top: 72px;
+    left: 450px;
+    font: normal normal normal 33px/40px Montserrat;
+    color: #BEBEC0;
+}
+
+article>h2 {
+    position: absolute;
+    top: 119px;
+    left: 450px;
+    font: normal normal bold 33px/40px Montserrat;
+    color: #464451;
+}
+
+article>p {
+    position: absolute;
+    top: 183px;
+    left: 410px;
+    width: 474px;
+    text-align: center;
+}
+
+p {
+    font: normal normal 600 13px/21px Open Sans;
+    color: #ABABAD;
+}
+
+h3 {
+    font: normal normal bold 18px/22px Montserrat;
+    color: #464451;
+}
+
+.box {
+    position: absolute;
+    width: 330px;
+    height: 240px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 4px;
+    padding-left: 25px;
+
+}
+
+#top {
+    top: 285px;
+    left: 477px;
+    border-top: 5px solid #EB6875;
+}
+
+#right {
+    top: 410px;
+    left: 850px;
+    border-top: 5px solid #199FB2;
+}
+
+#bottom {
+    top: 550px;
+    left: 477px;
+    border-top: 5px solid #EAC357;
+}
+
+#left {
+    top: 410px;
+    left: 100px;
+    border-top: 5px solid #5FD5CD;
+}
+
+
+@media only screen and (max-width: 600px) {
+    article>h1 {
+        /* top: 10%; */
+        left: auto;
+        width: 200px;
+        text-align: center;
+        margin: -20px 40px;
+    }
+
+    article>h2 {
+        top: 20%;
+        left: auto;
+        display: flex;
+        text-align: left;
+        margin-left: 40px;
+    }
+
+    article>p {
+        display: inline-block;
+        left: auto;
+        top: 35%;
+        text-align: center;
+        width: 250px;
+        margin-left: 10px ;
+    }
+
+    .box {
+        width: 250px;
+        height: 200px;
+    }
+
+    #top {
+        top: 420px;
+        left: 10px;
+    }
+
+    #right {
+        top: 860px;
+        left:10px;
+    }    
+    #bottom {
+        top: 640px;
+        left: 10px;
+    }
+
+    #left {
+        top: 1080px;
+        left: 10px;
+    }
+}

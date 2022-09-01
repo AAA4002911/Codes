@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+}
+body {
+    font-family: 'Calibri', 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+
+#main {
+    margin: 30px 50px;
+    font-weight: 800;
+    height: 40%;
+}
+
+h1 {
+    color: #4ca399;
+    font-size: 40px;
+}
+
+h2 {
+    color: #c1de2f;
+}
+
+#main p {
+    color: #c0c0c1;
+}
+
+article section {
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+    background-color: #2bb3b1;
+    color: white;
+    height: 55vh;
+    padding-left: 5%;
+    padding-top: 2%;
+}
+
+#section-left>h3 {
+    font-size: 25px;
+}
+
+#section-left>h4 {
+    font-weight: 100;
+}
+
+#dollar {
+    font-size: 60px;
+    font-weight: 300;
+}
+
+#section-left>button {
+    background-color: #bfdf32;
+    border: 1px solid #bfdf32;
+    position: relative;
+    left: 10%;
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+    color: white;
+    font-size: 15px;
+}
+
+article #section-right {
+    background-color: #4abebd;
+    float: right;
+}
+
+#section-right>p {
+    line-height: 15px;
+}
+
+#section-right>h3 {
+    font-size: 25px;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        text-align: center;
+        display: inline-block;
+    }
+    
+    #section-left {
+        width: 100%;
+    }
+
+    #section-left>button {
+        left: 0.5%;
+        width: 250px;
+        height: 60px;
+        border-radius: 5px;
+    }
+
+    #section-right {
+        width: 100%;
+    }
+
+    #section-right > h3 {
+        line-height: 10vh;
+    }
+}

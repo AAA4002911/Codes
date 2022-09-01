@@ -1,0 +1,35 @@
+body {
+    /* background-color: #333;
+    color: whitesmoke; */
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+    text-align: center;
+    margin-top: 10%;
+    font-size: 80px;
+    clear: both;
+}
+nav > p {
+    /* display: inline-block; */
+    float: right; 
+    font-size: 15px;
+    margin: 5px 5px;
+}
+#sign_in, #create_account {
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 0 20px;
+    background-color: rgb(150, 182, 253)
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+#search {
+    align-items: center;
+    border: 1px solid black;
+    margin: 0 300px;
+    height: 50px;
+    border-radius: 25px;
+}

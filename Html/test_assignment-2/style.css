@@ -1,0 +1,17 @@
+a{
+    text-decoration: none;
+    color: black;
+    margin-left: 25%;
+}
+nav ul li{
+    border: 2px solid black;
+    border-radius: 20%;
+    background-color: rgb(111, 213, 238);
+    width: 150px;
+    height: 50px;
+    margin: 10px 0 10px;
+}
+.margin {
+    margin-left: 5%;
+    margin-right: 5%;
+}

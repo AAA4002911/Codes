@@ -1,0 +1,24 @@
+img {
+    border-radius: 50%;
+}
+
+a {
+    background-color: #0a66c2;
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+a:hover {
+    padding: 7px 12px;
+}
+
+#skills,
+#projects {
+    margin-left: 50px;
+}
+
+#skills>p {
+    margin-left: 2.5rem;
+}
