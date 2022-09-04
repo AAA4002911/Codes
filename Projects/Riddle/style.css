@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    z-index: 2;
+}
+
+#background-image {
+    background-color: #674BB1;
+}
+
+#background-image>img {
+    mix-blend-mode: multiply;
+    position: fixed;
+    background-size: cover;
+    margin-top: -20px;
+    width: 100%;
+    z-index: 1;
+}

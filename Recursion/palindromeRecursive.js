@@ -45,6 +45,8 @@ function readLine() {
 
 // -------- Do NOT edit anything above this line ----------
 
+//using string
+/*
 let test_case = parseInt(readLine());
 while (test_case--) {
     let string = readLine();
@@ -66,4 +68,20 @@ function palindromeChecker(str) {
 
     if (str == reverseStr) return "True";
     else return "False";
+}
+*/
+
+//Alternate method
+let test_case = parseInt(readLine());
+while (test_case--) {
+    let string = readLine();
+    if (palindromeChecker(0, (string.length - 1), string)) console.log("True");
+    else console.log("False");
+}
+
+function palindromeChecker(i, j, str) {
+    if (str[i] != str[j]) return false;
+    if (i == j) return true;
+    if (i > j) return true;
+    return palindromeChecker(i + 1, j - 1, str);
 }

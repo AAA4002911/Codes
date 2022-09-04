@@ -1,0 +1,52 @@
+body {
+    background-color: #eee;
+}
+
+.card {
+    display: flex;
+    width: 40%;
+    height: 250px;
+    margin: 50px auto 20px auto;
+}
+
+.image {
+    background-color: #93c876;
+    height: 250px;
+    width: 200px;
+    border-radius: 5px 0 0 5px;
+}
+
+img {
+    overflow: visible;
+    position: relative;
+    right: 15%;
+    bottom: 15%;
+}
+
+#fix {
+    top: 10%;
+}
+
+.content {
+    padding: 2% 10%;
+    background-color: white;
+    border-radius: 0 5px 5px 0;
+}
+
+.content>h1 {
+    font-size: 28px;
+}
+
+.content>p {
+    font-size: 14px;
+}
+
+button {
+    background-color: #8dc26f;
+    color: white;
+    font-size: 12px;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 10px 15px;
+    cursor: pointer;
+}

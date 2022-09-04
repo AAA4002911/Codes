@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <article>
+        <h1>feedback form</h1>
+        <section id="form">
+            <form>
+                <label for="name">Name: </label>
+                <input type="text" id="name" name="Name" maxlength="50" minlength="3" required autofocus>
+                <br>
+                <label for="portfolio">Webpage: </label>
+                <input type="text" id="portfolio" required>
+                <br>
+                <label for="favColor">Favourite Colour </label>
+                <select id="favColor" name="Favourite Colour">
+                    <option value="red" id="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="blue">Blue</option>
+                </select>
+                <br>
+                <label for="likeness">How much you like your Favourite Colour </label>
+                <input type="range" min="1" max="100" name="likeness" id="likeness">
+                <br>
+                <span>
+                    <input type="submit" value="Submit" id="submit">
+                    <input type="reset" value="Reset">
+                </span>
+            </form>
+        </section>
+    </article>
+</body>
+
+</html>
