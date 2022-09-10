@@ -1,17 +1,356 @@
+:root {
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+}
+
 body {
     margin: 0;
-    z-index: 2;
-}
-
-#background-image {
     background-color: #674BB1;
+    background-image: url('./images/background-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
-#background-image>img {
-    mix-blend-mode: multiply;
-    position: fixed;
-    background-size: cover;
-    margin-top: -20px;
+header{
+    margin-top: 28px ;
+    margin-left: 36px;
+}
+
+#top-section {
+    padding-bottom: 58px;
+}
+
+#top-section,
+#text-container {
+    padding: 28px 36px;
+}
+
+.bg-light-gray {
+    background-color: #E3E8EC;
+}
+
+.bg-dark-gray {
+    background-color: #ADBDCA;
+}
+
+.bg-circle-orange {
+    background: transparent linear-gradient(180deg, #FEB078 0%, #FE74AA 100%) 0% 0% no-repeat padding-box;
+}
+
+.bg-circle-blue { 
+    background: transparent linear-gradient(180deg, #02BEFA 0%, #018CF7 100%) 0% 0% no-repeat padding-box;
+}
+
+.bg-circle-purple {
+    background: transparent linear-gradient(180deg, #EC53D0 0%, #B44DF2 100%) 0% 0% no-repeat padding-box;
+}
+
+.btn {
+    font-size: 12px;
+    padding: 1em 4em;
+    border-radius: 2.5em;
+    border: 0;
+}
+
+.btn.btn-white {
+    color: #674BB1;
+    background-color: #fff;
+}
+
+#graphics-container {
+    margin-top: 40px;
+}
+
+#graphic-main {
+    position: relative;
+    padding-right: 20px;
+}
+
+#app-card-floating {
+    width: 94px;
+    position: absolute;
+    top: 90px;
+    right: -10px;
+}
+
+.app-card {
+    border-radius: 9px;
+    overflow: hidden;
+}
+
+.app-card > .card-header{
     width: 100%;
-    z-index: 1;
+    height: 20px;
+    background-color: #0A2A3A;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.app-card.small > .card-header{
+    padding: 0 6px;
+}
+
+.app-card > .card-header > .search {
+    float: left;
+    background-color: #DEE3E7;
+    width: 60px;
+    height: 8px;
+    margin-top: 6px;
+    border-radius: 5px;
+}
+
+.app-card.small > .card-header > .search {
+    width: 50px;
+}
+
+.app-card > .card-header > .hamburger {
+    float: right;
+    width: 14px;
+    margin-top: 5px;
+}
+
+.app-card.small > .card-header > .hamburger {
+    width: 12px;
+}
+
+.app-card > .card-header > .hamburger > div {
+    background-color: #DEE3E7;
+    height: 2px;
+    margin-bottom: 2px;
+}
+
+
+.app-card > .card-header > .hamburger > div:last-child {
+    margin-bottom: 0;
+}
+
+.app-card > .card-body {
+    background-color: #FFFFFF;
+    padding: 40px 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.app-card.small > .card-body {
+    padding: 16px 6px;
+}
+
+.app-card > .card-body > ul {
+    padding-left: 0;
+    list-style: none;
+    margin: 0;
+}
+
+.app-card > .card-body .card-row{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.app-card > .card-body > ul > li {
+    margin-bottom: 10px;
+}
+
+.app-card.small > .card-body > ul > li{
+    margin-bottom: 6px;
+}
+
+.app-card > .card-body > ul > li:last-child{
+    margin-bottom: 0;
+}
+
+.app-card > .card-body .card-row > .row-img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ccc;
+}
+
+.app-card.small > .card-body .card-row > .row-img {
+    width: 10px;
+    height: 10px;   
+}
+
+.app-card > .card-body .card-row > .row-desc {
+    width: 60%;
+    margin-left: 18px;
+}
+
+.app-card.small > .card-body .card-row > .row-desc {
+    margin-left: 6px;
+}
+
+.app-card > .card-body .card-row > .row-desc > .row-line {
+    background-color: #E1E6EA;
+    height: 2px;
+    margin-bottom: 4px;
+}
+
+.app-card.small > .card-body .card-row > .row-desc > .row-line {
+    margin-bottom: 1px;
+    height: 1px;
+}
+
+.app-card > .card-body .card-row > .row-desc > .row-line.line-heading {
+    width: 34px;
+    height: 6px;
+    border-radius: 10px 10px 0px 0px;
+    margin-bottom: 6px;
+}
+
+.app-card.small > .card-body .card-row > .row-desc > .row-line.line-heading {
+    width: 12px;
+    height: 2px;
+    margin-bottom: 2px;
+}
+
+.app-card > .card-body .card-row > .row-desc > .row-line.line-lg {
+    width: 100%;
+}
+
+.app-card > .card-body .card-row > .row-desc > .row-line.line-md {
+    width: 90%;
+}
+
+.app-card > .card-body .card-row > .row-desc > .row-line.line-sm {
+    width: 80%;
+}
+
+.app-card > .card-body .card-row > .row-people {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 12px;
+    align-content: center;
+    width: calc(40% - 60px);
+}
+
+.app-card.small > .card-body .card-row > .row-people {
+    display: none;
+}
+
+.app-card > .card-body .card-row > .row-people > .circle {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #ADBDCA;
+    margin-right: 2px;
+}
+
+.app-card > .card-body .card-row > .row-people > .circle:last-child{
+    margin-right: 0px;
+}
+
+#text-container {
+    text-align: center;
+    margin: 0;
+}
+
+.header-line{
+    font-size: 1.5em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+#header-line-1 {
+    margin-bottom: 6px;
+}
+
+#header-line-2 {
+    margin-top: 6px;
+}
+
+#text-desc {
+    font-size: .9em;
+    font-weight: 400;
+    line-height: 2em;
+}
+
+
+#btn-container {
+    margin-top: 36px;
+}
+
+ul.icon-group{
+    list-style: none;
+    padding-left: 0;
+}
+
+.icon-group {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.icon-group > .icon-container{
+    width: 28px;
+    height: 28px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    padding: 3px 8px 0;
+    box-sizing: border-box;
+    margin-right: 8px;
+}
+
+.icon-group > .icon-container:last-child {
+    margin-right: 0;
+}
+
+.icon-group > .icon-container > img {
+    min-width: 100%;
+}
+
+
+@media screen and (min-width: 577px) {
+    #main-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #main-container > section {
+        flex-basis: 50%;
+        box-sizing: border-box;
+    }
+
+    body{
+        background-position: 50% 50%;
+        background-size: cover;
+    }
+
+    #top-section {
+        background: none;
+    }
+
+    .header-line{
+        font-size: 2.6em;
+    }
+
+    #graphics-container { 
+        width: 75%;
+        transform: scaleX(1.4) scaleY(1.5);
+        margin-left: 15%;
+        margin-top: 16%;
+    }
+
+    #text-container{
+        text-align: left;
+        margin-top: 40px;
+        padding-left: 82px;
+    }
+
+    .btn {
+        font-size: 18px;
+    }
+
+    footer{
+        position: fixed;
+        bottom: 50px;
+        right: 80px;
+    }
+
+    .icon-group > .icon-container{
+        width: 46px;
+        height: 46px;
+        padding: 10px 15px 0;
+    }
+
 }

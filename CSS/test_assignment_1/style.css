@@ -1,0 +1,25 @@
+#audio, #video {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+article {
+    border: 2px solid black;
+}
+
+h1 {
+    font-family:'Times New Roman', Times, serif;
+    font-size: 30px;
+    margin: 30px 5%;
+    width: 50vh;
+    background-color: #ddd;
+    border-radius: 50px;
+}
+
+#audio audio {
+    margin: 30px;
+}
+
+#video video {
+    margin: 30px;
+}

@@ -1,41 +1,72 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cards</title>
-    <link rel="stylesheet" href="style.css">
+
+    <link href="style.css" rel="stylesheet" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,700;&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <article>
-    <h1>Reliable, efficient delivery</h1>
-    <h2>Powered by Technology</h2>
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem psum has been the industry&apos;s standard dummy</p>
-    </article>
-    <article>
-    <section id="top" class="box">
-        <h3>Team Builder</h3>
-        <p>Lorem Ipsum is simply dummy text of the printing</p>
-    </section>
-    <section id="right" class="box">
-        <h3>Calculator</h3>
-        <p>Lorem Ipsum is simply dummy text of the printing</p>
-    </section>
-    <section id="bottom" class="box">
-        <h3>karma</h3>
-        <p>Lorem Ipsum is simply dummy text of the printing</p>
-    </section>
-    <section id="left" class="box">
-        <h3>Supervisor</h3>
-        <p>Lorem Ipsum is simply dummy text of the printing</p>
-    </section>
-    </article>
+    <div class="container">
+        <section id="header-section">
+            <h2 id="header-line-1" class="text-xlight">Reliable, efficient delivery</h2>
+            <h1 id="header-line-2" class="text-primary">Powered by Technology</h1>
+            <p id="header-line-3" class="text-medium text-light">Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br/> Lorem psum has been the industry’s standard dummy</p>
+        </section>
+        <section id="cards-section">
+            <div id="grid-container">
+                <div class="card" id="card2">
+                    <h3 class="text-primary text-large">
+                        Team Builder
+                    </h3>
+                    <p class="text-light text-medium">
+                        Lorem Ipsum is simply dummy text of the printing
+                    </p>
+                    <span class="icon-container">
+                        <img src="./images/groups.svg" />
+                    </span>
+                </div>
+                <div class="card" id="card3">
+                    <h3 class="text-primary text-large">
+                        Karma
+                    </h3>
+                    <p class="text-light text-medium">
+                        Lorem Ipsum is simply dummy text of the printing
+                    </p>
+                    <span class="icon-container">
+                        <img src="./images/tips.svg" />
+                    </span>
+                </div>
+                <div class="card" id="card4">
+                    <h3 class="text-primary text-large">
+                        Calculater
+                    </h3>
+                    <p class="text-light text-medium">
+                        Lorem Ipsum is simply dummy text of the printing
+                    </p>
+                    <span class="icon-container">
+                        <img src="./images/calculate.svg" />
+                    </span>
+                </div>
+                <div class="card" id="card1">
+                    <h3 class="text-primary text-large">
+                        Supervisor
+                    </h3>
+                    <p class="text-light text-medium">
+                        Lorem Ipsum is simply dummy text of the printing
+                    </p>
+                    <span class="icon-container">
+                        <img src="./images/person.svg" />
+                    </span>
+                </div>
+            </div>
+        </section>
+    </div>
 </body>
-
 </html>

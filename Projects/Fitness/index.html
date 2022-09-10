@@ -1,39 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fitness</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:ital,wght@0,100;0,400;1,400;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-    <article id="main">
-        <h1>Join Our Community</h1>
-        <h2>30 days, hassle free money back guarantee</h2>
-        <p>Gain accces to our full catalog of workouts along with expert trainers</p>
-        <p>Perfect for anyone who is serious about becoming and staying fit</p>
-    </article>
-    <article>
-        <section id="section-left">
-            <h3>Monthly Subscription</h3>
-            <h4><span id="dollar">&dollar;29</span> per month</h4>
-            <p>Full access for less than &dollar;1 a day</p>
-            <button>Sign Up</button>
+    <main>
+        <section id="section-1" class="container">
+            <h1 id="hero-heading" class="color-primary">Join our community</h1>
+            <h3 id="hero-sub-heading" class="color-info">30-day, hassle-free money back guarantee</h3>
+            <p id="hero-desc" class="color-gray">Gain access to our full catalog of workouts along with expert trainers 
+                <br/>Perfect for anyone who is serious about becoming and staying fit</p>
         </section>
-        <section id="section-right">
-            <h3>Why Us</h3>
-            <p>Unlimited access to 300+ gyms</p>
-            <p>Multiple workout formats</p>
-            <p>At home live workouts</p>
-            <p>At centre group classes</p>
-            <p>Personalized workout plans</p>
-            <p>Personalized diet plans</p>
+        <section id="section-2" class="bg-primary color-white">
+            <div id="left-col" class="col">
+                <h2 class="col-header">Monthly Subscription</h2>
+                <div id="currency-container">
+                    <div class="value">&dollar;29</div>
+                    &nbsp;
+                    <div class="unit">per month</div>
+                </div>
+                <div class="desc">
+                    Full access for less than $1 a day
+                </div>
+                <div id="btn-container">
+                    <button class="btn-primary">Sign Up</button>
+                </div>
+            </div>
+            <div id="right-col" class="col bg-secondary">
+                <h2 class="col-header">
+                    Why Us
+                </h2>
+                <ul id="features">
+                    <li>Unlimited access to 300+ gyms </li>
+                    <li>Multiple workout formats</li>
+                    <li>At home live workouts</li>
+                    <li>At centre group classes</li>
+                    <li>Personalized workout plans </li>
+                    <li>Personalized diet plans </li>
+                    <li>On demand private trainers</li>
+                </ul>
+            </div>
         </section>
-    </article>
+    </main>
 </body>
-
 </html>
-

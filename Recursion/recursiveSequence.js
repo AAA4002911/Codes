@@ -51,33 +51,45 @@ function readLine() {
 
 // -------- Do NOT edit anything above this line ----------
 
-// 1+(2x3)+(4x5x6)+(7x8x9x10)+(11x12x13x14x15)
-// f(1) = 1
-// f(2) = 7
-// f(3) = 127
-// f(4) = 5167 
-// f(5) = 365527 = 11*12*13*14*15 + f(4)
-
-// f(n) = f(n - 1) + product of n terms
+//LOGIC
+/*
+f(n) = (1) +(2x3) + (4x5x6) + (7x8x9x10) + (11x12x13x14x15) + (16x17x18x19x20x21)... (n-terms)
 
 
-let test_cases = parseInt(readLine());
+f(5) = 1+(2x3)+(4x5x6)+(7x8x9x10)+(11x12x13x14x15) = 365527
+        1 + 6 + 120 + 5040 + 360360
+        1,  7,  127,  5167, 365527
 
-while (test_cases--) {
-    let n = parseInt(readLine());
-    console.log(rec_seq(1, 1, n));
-}
+6 --- 21  --- (6+5+4+3+2+1)
+5 --- 15  --- (5+4+3+2+1)
+4 --- 10  --- (4+3+2+1)
+3 --- 6 --- (3+2+1)
+2 --- 3  --- (2+1)
+1 --- 1 --- (1)
 
-function rec_seq(i, start, n) {
-    if (i > n) return 0;
-    
-    let end = ((i * (i + 1)) / 2);
-    let sum = 1;
-    let temp = start
-    for (let j = end; j >= start; j--) {
-        sum *= j;
-        temp++;
+1,3,6,10,15,21
+*/
+
+
+let test_case = parseInt(readLine());
+
+function sequence(n) {
+    if (n == 1) return 1;
+
+    let lastNum = (n * (n + 1)) / 2;
+    let startNum = lastNum - (n - 1);
+    let product = 1;
+    for (let i = startNum; i <= lastNum; i++) {
+        product *= i;
     }
 
-    return sum + rec_seq(i + 1, temp, n);
+    return  (product + sequence(n - 1));
+
+}
+
+
+while(test_case--) {
+    let input = parseInt(readLine());
+    if (input < 0) continue;
+    console.log(sequence(input));
 }
