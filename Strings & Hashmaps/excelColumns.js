@@ -82,15 +82,3 @@ while (testcases--) {
     let number = parseInt(readLine());
     console.log(converter(number));
 }
-
-function converter1(n) {
-    n -= 1;
-    let str = '';
-    while (n >= 0) {
-        let rem = n % 26;
-        str += (String.fromCharCode(90 - rem))
-        n = Math.floor(n / 26);
-        n -= 1;
-    }
-    return (str.split("").reverse().join(""));
-}
