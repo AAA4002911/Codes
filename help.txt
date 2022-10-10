@@ -1,0 +1,9 @@
+terminal command for running js file using node
+
+$ cat input.txt | node main.js  		// output on console".
+$ cat input.txt | node main.js > output.txt 	// output in file.
+
+
+cmd command for running js file using node
+
+$ node main.js < input.txt
