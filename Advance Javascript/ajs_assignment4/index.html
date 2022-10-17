@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <main>
+        <h1>Cart</h1>
+        <label>Item Name <input type="text" id="item-name-input" name="name"></label>
+        <label>Item Price <input type="number" id="item-price-input" name="price"></label>
+        <button id="add">Add</button>
+        <section id="table-section">
+            <table>
+                <thead>
+                    <tr>
+                        <th data-ns-test="item-name">Name</th>
+                        <th data-ns-test="item-price">Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr></tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th data-ns-test="grandTotal" id="total">GRAND TOTAL</th>
+                        <th id="value">0</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+    </main>
+    <script src="./index.js"></script>
+</body>
+
+</html>
