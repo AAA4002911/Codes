@@ -22,7 +22,7 @@ body {
     background-color: #eee;
     padding: 10px 0;
     border-radius: 25px;
-    background: linear-gradient(-45deg, white, rgb(217, 98, 179));
+    background: linear-gradient(-45deg, white, rgb(216, 135, 190));
     border: 1px solid pink;
 }
 
@@ -33,7 +33,7 @@ body {
     margin: 0 auto;
     background-color: #eee;
     border-radius: 12.5px;
-    background: linear-gradient(-45deg, white, rgb(217, 98, 179));
+    background: linear-gradient(-45deg, white, rgb(216, 135, 190));
     border: 1px solid pink;
 }
 

@@ -46,6 +46,29 @@ function readLine() {
 // -------- Do NOT edit anything above this line ----------
 // Use readLine() for taking input, it will read one line of from the input  and is stored in string format
 
+// More Optimised Code
+// let n = parseInt(readLine());
+// for (let i = 1; i <= n; i++) {
+//     let row = '';
+//     for (let j = n - i; j > 0; j--) {
+//         row += ' ';
+//     }
+//     if (i == 1) row += '*';
+//     for (let j = 1; j < i; j++) {
+//         if (i % 2 == 0) {
+//             row += '$';
+//             row += '*';
+//         }
+//         else {
+//             row += '*';
+//             row += '$';
+//         }
+//     }
+//     if (i % 2 == 0) row += '$';
+//     else if (i != 1) row += '*';
+//     console.log(row);
+// }
+
 let n = parseInt(readLine());
 
 for (let i = 1; i <= n; i++) {

@@ -51,24 +51,16 @@ function readLine() {
 // Use readLine() for taking input, it will read one line of from the input  and is stored in string format
 let [numOfQues, queries] = readLine().split(" ").map(Number);
 let time_arr = readLine().split(" ").map(Number);
-let score_arr = readLine().split(" ").map(Number);
+readLine() //score not required
 
-let bucket = new Map();
-for (let i = 0; i < numOfQues; i++) {
-    bucket.set(time_arr[i], score_arr[i])
-}
-let sorted_bucket = new Map([...bucket.entries()].sort((a, b) => b[1] - a[1]));
-let sorted_time = [...sorted_bucket.keys()]
-
-function max_score(n) {
-    let sum = 0;
-    for (let i = 0; i < n; i++) {
-        sum += sorted_time[i];
-    }
-    return sum;
+time_arr.sort((a, b) => (b - a));
+let prefix_sum = [];
+prefix_sum.push(time_arr[0]);
+for (let i = 1; i < numOfQues; i++) {
+    prefix_sum.push(prefix_sum[i - 1] + time_arr[i]);    
 }
 
 while (queries--) {
     let solve_ques = parseInt(readLine());
-    console.log(max_score(solve_ques));
+    console.log(prefix_sum[solve_ques - 1]);
 }

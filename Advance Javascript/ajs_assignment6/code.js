@@ -59,6 +59,7 @@ function resetFunc() {
     document.getElementById('scissor').style.display = 'none';
     document.getElementById('user').innerText = `Your points: 0`;
     document.getElementById('computer').innerText = `Computer points: 0`;
+    document.getElementById('start').disabled = false;
 }
 
 // Final Result Function
@@ -123,6 +124,7 @@ function roundSetter() {
         document.getElementById('paper').style.display = 'inline-block';
         document.getElementById('scissor').style.display = 'inline-block';
         document.getElementById("score").innerText = rounds + ` / ${max_round}`;
+        document.getElementById('start').disabled = true;
     }
     else {
         alert(`Not a Valid Game rounds`)

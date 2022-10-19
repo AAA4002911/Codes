@@ -44,6 +44,27 @@ function readLine() {
 // -------- Do NOT edit anything above this line ----------
 // Use readLine() for taking input, it will read one line of from the input  and is stored in string format
 
+//More Optimmised Time Commplexity
+
+let n = parseInt(readLine());
+let arr = [];
+for (let i = 0; i < n; i++) {
+    arr.push(parseInt(readLine()));
+}
+let result = 0;
+let i = 0, j = 1;
+while (i < n) {
+    if (arr[i] < arr[j]) {
+        let profit = arr[j] - arr[i];
+        if (profit > result) result = profit;
+    }
+    else i = j;
+    j++;
+}
+console.log(result)
+
+// BruteForce Approach
+/*
 let noOfDays = parseInt(readLine());
 let price = [];
 for (let i = 0; i < noOfDays; i++) {
@@ -61,5 +82,5 @@ for (let i = 0; i < noOfDays; i++) {
         if (max_profit > prev_max_profit) prev_max_profit = max_profit;
     }
 }
-
 console.log(prev_max_profit);
+*/

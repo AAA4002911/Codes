@@ -51,3 +51,79 @@ function readLine() {
 
 // -------- Do NOT edit anything above this line ----------
 // Use readLine() for taking input, it will read one line of from the input  and is stored in string format
+
+function merge(C, p, q, r, reverse) {
+    let n1 = q - p + 1;
+    let n2 = r - q;
+    let A = [], B = [];
+    for (let i = 0; i < n1; i++) {
+        A[i] = C[p + i];
+    }
+    for (let j = 0; j < n2; j++) {
+        B[j] = C[q + 1 + j];
+    }
+    let i = 0, j = 0, k = p;
+    if (reverse == false) {
+        while (i < n1 && j < n2) {
+            if (A[i] <= B[j]) {
+                C[k] = A[i];
+                i++;
+            }
+            else {
+                C[k] = B[j];
+                j++;
+            }
+            k++;
+        }
+    }
+    else {
+        while (i < n1 && j < n2) {
+            if (A[i] >= B[j]) {
+                C[k] = A[i];
+                i++;
+            }
+            else {
+                C[k] = B[j];
+                j++;
+            }
+            k++;
+        }
+    }
+    while (i < n1) {
+        C[k] = A[i];
+        i++;
+        k++;
+    }
+    while (j < n2) {
+        C[k] = B[j];
+        j++;
+        k++;
+    }
+}
+
+function merge_sort(arr, start, end, reverse) {
+    if (start >= end) return;
+
+    let mid = parseInt((start + end) / 2);
+    merge_sort(arr, start, mid, reverse);
+    merge_sort(arr, mid + 1, end, reverse);
+    merge(arr, start, mid, end, reverse);
+}
+
+let test_case = parseInt(readLine());
+while (test_case--) {
+    numOfpeople = parseInt(readLine());
+    let girls_height = readLine().split(" ").map(Number);
+    let boys_height = readLine().split(" ").map(Number);
+
+    merge_sort(girls_height, 0, numOfpeople - 1, false);
+    merge_sort(boys_height, 0, numOfpeople - 1, true);
+
+    let match = 0;
+    for (let i = 0; i < numOfpeople; i++) {
+        if (((boys_height[i] % girls_height[i]) == 0) || ((girls_height[i] % boys_height[i]) == 0)) {
+            match++;
+        }
+    }
+    console.log(match)
+}
