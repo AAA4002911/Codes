@@ -2,12 +2,13 @@ body {
     text-align: center;
     box-sizing: border-box;
 }
+
 #container {
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
     gap: 5px;
-    width: 610px;
+    width: 650px;
     margin: 20vh auto 0;
 }
 
@@ -16,7 +17,14 @@ img {
     height: 200px;
 }
 
-#reset,#btn {
+.select {
+    width: 190px;
+    height: 190px;
+    border: 5px solid blue;
+}
+
+#reset,
+#btn {
     display: none;
 }
 
@@ -27,7 +35,7 @@ button {
     border-radius: 25px;
     padding: 5px 50px;
     color: white;
-    margin: 20px 5px; 
+    margin: 20px 5px;
 }
 
 p {
