@@ -41,3 +41,10 @@ button {
 p {
     font-size: 20px;
 }
+
+@media screen and (max-width: 600px) {
+    #container {
+        width: 410px;
+        margin:auto 0;
+    }
+}
