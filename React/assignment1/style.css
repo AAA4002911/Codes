@@ -1,0 +1,35 @@
+body {
+    text-align: center;
+    box-sizing: border-box;
+}
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 5px;
+    width: 610px;
+    margin: 20vh auto 0;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+}
+
+#reset,#btn {
+    display: none;
+}
+
+button {
+    background-color: #24a6ed;
+    font-size: 18px;
+    border: none;
+    border-radius: 25px;
+    padding: 5px 50px;
+    color: white;
+    margin: 20px 5px; 
+}
+
+p {
+    font-size: 20px;
+}
