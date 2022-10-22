@@ -52,10 +52,12 @@ function guess_checker(str1, str2) {
     str2 = str2.toLowerCase();
 
     for (let i = 0; i < str1.length; i++) {
+        if (str1[i] == " ") continue;
         if (!map.has(str1[i])) map.set(str1[i], 1);
         else map.set(str1[i], map.get(str1[i]) + 1);
     }
     for (let i = 0; i < str2.length; i++) {
+        if (str2[i] == " ") continue;
         if (!map.has(str2[i])) return 'NO';
         else {
             if (map.get(str2[i]) == 0) return 'NO';
