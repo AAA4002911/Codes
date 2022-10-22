@@ -64,20 +64,18 @@ function readLine() {
 let n = parseInt(readLine());
 let arr = readLine().split(" ").map(x =>(parseInt(x)));
 
-function dec2bin(dec) {
-    let binary = (dec.toString(2));
-    let sum = 0;
-    for (let i = 0; i < binary.length; i++) {
-        sum += parseInt(binary[i]);
+function noOf1s(n) {
+    let count = 0;
+    while (n) {
+        n = n & (n - 1);
+        count++;
     }
-    return sum;
+    return count;
 }
 
-let bucket = new Map();
-for (let i = 0; i < n; i++) { 
-   bucket.set(arr[i], dec2bin(arr[i]));
-}
-bucket = ([...bucket.entries()].sort((a, b) => b[1] - a[1]));
-for (let i = 0; i < bucket.length; i++) {
-    process.stdout.write(`${bucket[i][0]} `);
-}
+arr.sort(function (a, b) {
+    let na = noOf1s(a);
+    let nb = noOf1s(b);
+    return nb - na;
+})
+console.log(...arr);
