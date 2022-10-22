@@ -40,17 +40,13 @@ function readLine() {
 // -------- Do NOT edit anything above this line ----------
 // Use readLine() for taking input, it will read one line of from the input  and is stored in string format
 
-function merge(C, p, q, r) {
-    let n1 = q - p + 1;
-    let n2 = r - q;
-    let A = [], B = [];
-    for (let i = 0; i < n1; i++) {
-        A[i] = C[p + i];
-    }
-    for (let j = 0; j < n2; j++) {
-        B[j] = C[q + 1 + j];
-    }
-    let i = 0, j = 0, k = p;
+
+
+function merge(A, B) {
+    let n1 = A.length;
+    let n2 = B.length;
+    let C = [];
+    let i = 0, j = 0, k = 0;
     while (i < n1 && j < n2) {
         if (A[i] <= B[j]) {
             C[k] = A[i];
@@ -72,26 +68,15 @@ function merge(C, p, q, r) {
         j++;
         k++;
     }
-}
-
-function merge_sort(arr, start, end) {
-    if (start >= end) return;
-
-    let mid = parseInt((start + end) / 2);
-    merge_sort(arr, start, mid);
-    merge_sort(arr, mid + 1, end);
-    merge(arr, start, mid, end);
+    return C;
 }
 
 let testCase = parseInt(readLine());
 let n = parseInt(readLine());
-let result = [];
+let arr1 = readLine().split(" ").map(Number);
+testCase -= 1;
 while (testCase--) {
-    let arr = readLine().split(" ").map(Number);
-    for (let i = 0; i < n; i++) {
-        result.push(arr[i]);
-    }
+    let arr2 = readLine().split(" ").map(Number);
+    arr1 = (merge(arr1, arr2));
 }
-console.log(result)
-merge_sort(result, 0, result.length - 1);
-console.log(...result)
+console.log(...arr1);
