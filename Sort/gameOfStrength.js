@@ -46,6 +46,8 @@ function readLine() {
 
 // -------- Do NOT edit anything above this line ----------
 // Use readLine() for taking input, it will read one line of from the input  and is stored in string format
+
+
 function solution(n, arr) {
     arr.sort((a, b) => (b - a));
     let result = 0;
