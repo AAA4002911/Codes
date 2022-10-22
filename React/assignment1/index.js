@@ -27,12 +27,14 @@ let first_image;
 let second_image;
 function selection(event) {
     if (count == 0) {
+        event.target.setAttribute('class', 'select');
         document.getElementsByTagName('h3')[0].style.display = 'none';
         document.getElementById('reset').style.display = 'inline-block';
         first_image = event.target;
         count++;
     }
     else if (count == 1 && first_image.id != event.target.id) {
+        event.target.setAttribute('class', 'select');
         second_image = event.target;
         document.getElementById('btn').style.display = 'inline-block';
         count++;
@@ -47,12 +49,17 @@ image.forEach(img => {
     img.addEventListener('click', function (event) { selection(event) })
 })
 
+function highlight_rm() {
+    document.querySelectorAll('.select').forEach(cls => {cls.classList.remove('select')});
+}
+
 document.getElementById('reset').addEventListener('click', function () {
     count = 0;
     document.getElementById('reset').style.display = 'none';
     document.getElementById('btn').style.display = 'none';
     document.getElementById('para').innerText = '';
     document.getElementsByTagName('h3')[0].style.display = 'block';
+    highlight_rm();
 })
 document.getElementById('btn').addEventListener('click', function () {
     let display = document.getElementById('para');
@@ -62,4 +69,5 @@ document.getElementById('btn').addEventListener('click', function () {
     else {
         display.innerText = `We can't verify you as a human. You selected the non-identical tiles`;
     }
+    highlight_rm();
 })
