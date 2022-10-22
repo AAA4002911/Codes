@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grofers Checkout</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <div id="main-div">
+        <section id="table-section">
+            <table>
+                <thead>
+                    <tr>
+                        <th data-ns-test="item-name">Name</th>
+                        <th data-ns-test="item-price">Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Item 1</td>
+                        <td data-ns-test="prices"><input class="price-value" value="60"/></td>
+                    </tr>
+                    <tr>
+                        <td>Item 2</td>
+                        <td data-ns-test="prices"><input class="price-value" value="100"/></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th data-ns-test="grandTotal" id="total">GRAND TOTAL</th>
+                        <th id="value">0</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+    </div>
+</body>
+</html>
