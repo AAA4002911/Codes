@@ -1,0 +1,28 @@
+#container {
+    width: 50vw;
+    height: auto;
+    margin: 10vh auto;
+    text-align: center;
+    background: linear-gradient(gray 5%,white, gray 95%);
+    padding: 50px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px gray;
+}
+
+button {
+    background-color: #aaa;
+    font-size: 18px;
+    border-radius: 25px;
+    border: none;
+    padding: 5px 50px;
+    margin: 20px 5px;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+#display {
+    font-size: 40px;
+}
+
