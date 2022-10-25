@@ -1,0 +1,8 @@
+#loading-bar {
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 20px;
+    margin: 10vh 10vw;
+    background: red;
+}
