@@ -60,6 +60,7 @@ document.getElementById('reset').addEventListener('click', function () {
     document.getElementById('para').innerText = '';
     document.getElementsByTagName('h3')[0].style.display = 'block';
     highlight_rm();
+    location.reload();
 })
 document.getElementById('btn').addEventListener('click', function () {
     let display = document.getElementById('para');
