@@ -11,6 +11,7 @@
 
 button {
     background-color: #aaa;
+    color: black;
     font-size: 18px;
     border-radius: 25px;
     border: none;
@@ -24,5 +25,6 @@ button:active {
 
 #display {
     font-size: 40px;
+    font-family: sans-serif;
 }
 
