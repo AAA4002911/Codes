@@ -54,35 +54,29 @@ class LinkedList {
     // Do not change anything above this line
     deleteNode(position) {
         // YOU ONLY NEED TO COMPLETE THIS FUNCTION.
-        let temp = this.head;
-        let prev = this.head;
-        for (let i = 0; i <= position; i++) {
-            if (position == 0) {
-                this.head = this.head.next
-            }
-            else {
-                if (i == position) {
-                    prev.next = temp.next;
-                }
-                else {
-                    prev = temp
-                    if (prev == null) {
-                        break;
-                    }
-                    temp = temp.next;
-                }
-            }
+        let curr = this.head;
+        if (position == 0) {
+            this.head = this.head.next;
+            return;
         }
+        for (let i = 0; i < position - 1; i++) {
+            if (!curr || !curr.next) return;
+            curr = curr.next;
+        }
+        if (!curr.next) return;
+        curr.next = curr.next.next;
     }
 
 
     //Utility function to print the linked LinkedList 
     printList() {
         let temp = this.head;
+        let str = '';
         while (temp) {
-            console.log(temp.data)
+            str += (temp.data + ' ');
             temp = temp.next;
         }
+        console.log(str);
     }
 }
 
