@@ -1,0 +1,36 @@
+.title-bar {
+    padding: 0 20vw;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    margin-bottom: 3rem;
+}
+
+.title-bar>h1 {
+    color: rgb(20, 101, 20);
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.title-bar>h1::before {
+    content: url("../../public/Icons/insta-icon.png");
+    display: inline-block;
+    position: relative;
+    right: 10px;
+    top: 12.5px;
+}
+
+.title-bar>img {
+    height: 100%;
+    position: relative;
+    top: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+    .title-bar {
+        padding: 0 8vw;
+    }
+}
