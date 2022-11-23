@@ -1,0 +1,36 @@
+{
+    "user": [
+        {
+            "name": "Raj",
+            "location": "Delhi",
+            "likes": 21,
+            "description": "Spending the Nights Drinking",
+            "PostImage": "./Images/image4.jpg",
+            "date": "11/11/2022"
+        },
+        {
+            "name": "Neeraj",
+            "location": "Pune",
+            "likes": 187,
+            "description": "Beautiful Big Sur",
+            "PostImage": "./Images/image2.png",
+            "date": "15/05/2022"
+        },
+        {
+            "name": "Rahul",
+            "location": "Hyderabad",
+            "likes": 4987,
+            "description": "Off to Switzerland \\m/",
+            "PostImage": "./Images/image3.png",
+            "date": "10/06/2022"
+        },
+        {
+            "name": "Siva",
+            "location": "Bengaluru",
+            "likes": 64,
+            "description": "Kick start your career with a bang",
+            "PostImage": "./Images/image1.png",
+            "date": "12/02/2022"
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+.two-part {
+    height: 100vh;
+    width: 45vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.two-part>img {
+    width: 50vw;
+    height: auto;
+}
+
+.lt {
+    float: left;
+}
+
+.rt {
+    float: right;   
+}
+
+.rt>button {
+    background-color: #9d92ff;
+    border-radius: 5px;
+    border-style: none;
+    width: 20%;
+    height: 5%;
+}
+
+.rt>button:active {
+    transform: scale(0.95);
+    box-shadow: 5px 5px 10px gray;
+}
+
+.rt>h1 {
+    color: #6b5b75;
+    text-shadow: 5px 5px 5px #9d92ff;
+}
