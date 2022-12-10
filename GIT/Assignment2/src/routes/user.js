@@ -4,7 +4,7 @@ const bcrypt = require('bcrypt');
 var jwt = require('jsonwebtoken');
 const PRIVATE_KEY = process.env.PRIVATE_KEY;
 
-router.post("register", async (req, res) => {
+router.post("/register", async (req, res) => {
     try {
         const { name, email, password } = req.body;
         let user = await User.findOne({ email: email });
@@ -39,7 +39,7 @@ router.post("register", async (req, res) => {
     }
 })
 
-router.post("login", async (req, res) => {
+router.post("/login", async (req, res) => {
     try {
         const { email, password } = req.body;
         let user = await User.findOne({ email: email });
@@ -79,3 +79,5 @@ router.post("login", async (req, res) => {
         })
     }
 })
+
+module.exports = router;
