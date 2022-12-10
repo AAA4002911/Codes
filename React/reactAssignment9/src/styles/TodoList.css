@@ -4,7 +4,7 @@
 }
 
 form {
-    height: 20vh;
+    height: 30vh;
     background-color: rgb(244, 173, 173);
     text-align: center;
     border-radius: 20px 20px 0 0;
@@ -24,7 +24,7 @@ textarea {
     width: 50%;
     max-height: 20%;
     padding-left: 2%;
-    height: 20%;
+    padding-top: 1%;
     font-size: 1rem;
 }
 
